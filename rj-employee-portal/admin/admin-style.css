@@ -1,0 +1,36 @@
+.pdf-item{
+    display: flex;
+    align-items: center;
+}
+#adminmenu .wp-menu-image img{
+    padding-top: 3px;
+    max-width: 24px;
+}
+
+.rj-em-heading-num{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+#rj_ep_aspire_headings{
+    label{
+        font-weight: bold;
+    }
+    input{
+        width: 60%;
+    }
+}
+.subfields-container{
+    margin-left: 20px;
+
+    label{
+        min-width: 90px;
+        display: inline-block;
+    }
+
+}
+
+.rj_ep_aspire_field_group{
+    border-bottom: 2px solid grey;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}

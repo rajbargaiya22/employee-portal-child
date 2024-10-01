@@ -1,0 +1,618 @@
+/*
+Theme Name: Astra Child
+Theme URI:
+Description: This is the Astra Child Theme
+Author: Rajendra
+Author URI:
+Template: astra
+Version: 1.0.0
+*/
+
+:root{
+	--blue-color : #004282;
+	--green-color : #009444;
+	--para-color: #54595F;
+	--white-color: #ffffff;
+	--black-color: #000000;
+	--orange-color: #e97132;
+	--green-color: #196b24;
+	--skyblue-color: #0f9ed5;
+	--purple-color: #a02b93;
+	--lightgreen-color: #4ea72e;
+	--dblue-color: #4b2ca2;
+	--lblue-color: #2c71a4;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+body a{
+	text-decoration: none;
+	color: #000;
+}
+p, time{
+	color: var(--para-color);
+	font: 400 clamp(14px, 3vw, 16px)/1.5 'Poppins', sans-serif;
+}
+body ul, body ol{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	width: 100%;
+}
+/* header */
+.rj-header-container{
+	background-color: var(--blue-color);
+}
+.rj-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.rj-logo img{
+	max-width: 250px;
+}
+.search-form-container{
+	position: relative;
+}
+.rj-header-search{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.rj-header-search svg{
+	width: 30px;
+	height: 30px;
+}
+.rj-header-search .rj-home-icon svg path{
+	fill: var(--white-color);
+}
+.searchform{
+	position: relative;	
+}
+label[for="searchsubmit"]{
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	
+}
+label[for="searchsubmit"] svg{
+	width: 20px;
+}
+#searchsubmit{
+	display: none;
+}
+
+.search-suggestions{
+	background-color: #fff;
+	box-shadow: 0 0 15px 10px #efefef;
+	position: absolute;
+	right: 0;
+	z-index: 99;
+	min-width: clamp(250px, 30vw, 350px);
+	padding: 10px;
+	display: none;
+}
+.search-suggestions.show{
+	display: block;
+}
+.rj-employee-portal, .rj-single-post{
+	width: 100%;
+	padding-block: clamp(20px, 5%, 50px);
+}
+.rj-employee-portal-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: clamp(20px, 4vw, 40px);
+}
+.rj-employee-portal-grid > div{
+	box-shadow: 0 0 18px 0 rgba(0,0,0,.25);
+	padding: 20px;
+	border-radius: 8px;
+}
+/* .rj-employee-portals-bg :is(div:nth-child(5n + 1) .svg-con, a:nth-child(5n + 1)){ */
+.rj-employee-portals-bg div:nth-child(5n + 1) .svg-con{
+	background-color: var(--orange-color);
+}
+.rj-employee-portals-bg div:nth-child(5n + 2) .svg-con{
+	background-color: var(--green-color);
+}
+.rj-employee-portals-bg div:nth-child(5n + 3) .svg-con{
+	background-color: var(--skyblue-color);
+}
+.rj-employee-portals-bg div:nth-child(5n + 4) .svg-con{
+	background-color: var(--purple-color);
+}
+.rj-employee-portals-bg div:nth-child(5n + 5) .svg-con{
+	background-color: var(--lightgreen-color);
+}
+.rj-employee-portal-grid .svg-con{
+	max-width: 100px;
+	margin-inline: auto;
+	background-color: #f4f3e5;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	transition: all 0.5s ease-in;
+}
+.rj-employee-portal-grid > div:hover .svg-con{
+	transform: rotateY(180deg);
+}
+.rj-employee-portal-grid .svg-con svg{
+	max-width: 50px;
+	aspect-ratio: 1/1;
+}
+.rj-employee-portal-grid .svg-con svg path{
+	fill: #fff;
+}
+.rj-employee-portal-grid .employee-title{
+	text-align:center;
+	text-transform: uppercase;
+	margin-top: 15px;
+	color: #004282;
+	font: 600 20px/1.3 Poppins,sans-serif;
+}
+
+/* hr benefits */
+.hr-benefits-grid{
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, clamp(200px, 14vw, 300px));
+	grid-auto-rows: 100px;
+	text-align: center;
+	gap: 1rem;
+}
+.hr-benefits-grid .hr-option{
+	padding: 1rem;
+	border-radius: 1rem;
+	color: var(--white-color);	
+	display: grid;
+	place-items: center;
+}
+
+.hr-benefits-grid > *:hover{
+	color: var(--white-color);
+}
+
+.hr-benefits-grid .hr-option:first-child{
+	background-color: var(--purple-color);	
+}
+.hr-benefits-grid .hr-option:nth-child(2){
+	background-color: var(--dblue-color);	
+}
+.hr-benefits-grid .hr-option:nth-child(3){
+	background-color: var(--lblue-color);	
+}
+.hr-benefits-grid .hr-option:nth-child(4){
+	background-color: var(--green-color);	
+}
+.hr-benefits-grid .hr-option:nth-child(5){
+	background-color: var(--lightgreen-color);	
+}
+
+/* common css */
+.rj-main-heading{
+	font: 700 clamp(30px, 3vw, 50px)/1.3 'Poppins', sans-serif;
+	padding: clamp(20px, 4vw, 30px) 0;
+}
+.rj-main{
+	margin: clamp(20px, 5%, 50px) 0;
+}
+.rj-post-container, .it-help-box{
+	background-color: #fff;
+  	box-shadow: 0 0 10px 0 rgba(0,0,0,.11);
+	height: 100%;
+}
+.rj-post-container .post-thumb, .rj-post-container img{
+	width: 100%;	
+	aspect-ratio: 16/9;
+	object-fit: cover;
+}
+.rj-post-content{
+	padding: 10px;
+	display: flex;
+  	flex-direction: column;
+  	gap: 15px;
+}
+.rj-post-content h2, .rj-vendor-form-title{
+	font: 700 clamp(16px, 3vw, 20px)/1.6 'Poppins', sans-serif;
+	text-transform: capitalize;
+	margin-bottom: 0;
+}
+.rj-post-content h2 a, .rj-vendor-form-title{
+	color: var(--blue-color);
+}
+.rj-post-content h2:hover a{
+	color: var(--green	-color);
+}
+.rj-post-desc{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+.rj-read-more{
+	display: block;
+	width: max-content;
+	background-color: var(--green-color);
+	color: var(--white-color);
+	padding: 5px 30px;
+	font: 500 12px/2 'Poppins', sans-serif;
+}
+.rj-read-more:hover{
+	color: var(--white-color);
+}
+
+.newsletter-carousel{
+	overflow: hidden;
+	position: relative;
+}
+.newsletter-carousel .slick-arrow{
+	z-index: 2;
+	background-color: var(--blue-color);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+.newsletter-carousel .slick-arrow:hover, .newsletter-carousel .slick-arrow:focus{
+	background-color: var(--blue-color);
+}
+.newsletter-carousel .slick-arrow::before{
+	color: var(--white-color);
+	font-size: 16px;
+}
+.newsletter-carousel .slick-prev{
+	left: 5px;
+}
+.newsletter-carousel .slick-next{
+	right: 5px;
+}
+.rj-monthly-newsletter{
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.rj-monthly-newsletter a{
+	background-color: var(--blue-color);
+	border-radius: 5px;	
+	color: var(--white-color);
+	padding:  5px 10px;
+}
+
+.it-help-box > div{
+	padding: 20px 40px 40px;
+}
+.rj-vendor-form-title{
+	margin: 20px 0;
+}
+.vendor-view-more{
+	margin: 10px 0;
+}
+.contact-page-forms{
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.vendor-searchform{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, clamp(150px, 20vw, 200px)));
+	align-items: end;
+	gap: 10px;
+	margin-bottom: clamp(20px, 3vw, 40px);
+}
+.vendor-searchform :is(input, select){
+	padding: 10px;
+	height: 35px;
+	line-height: 16px;
+}
+.vendor-searchform select{
+	padding: 0 10px;
+}
+.vendor-searchform input[type="submit"]{
+	background-color: var(--blue-color);
+	padding: 0 10px;
+}
+#rj-vendor-list .rj-post-content{
+	gap: 5px;
+	position: relative;
+}
+#rj-vendor-list .strategic-vendor{
+	position: absolute;
+	top: 0;
+	right: 0;  	
+	background-color: var(--blue-color);
+	color: var(--white-color);
+	font-size: 12px;
+	padding: 2px 6px 3px;
+	font-weight: 600;
+}
+
+.new-vendor-heading{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.single-newsletter-thumb{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+	gap: 20px;
+	margin-bottom: 30px;
+}
+.single-newsletter-thumb img{
+	aspect-ratio: 1/1;
+	object-fit: contain;
+}
+.news-images{
+	position: relative;
+	padding: 20px;
+}
+.news-images svg{
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+}
+.news-images:nth-child(5n + 1) svg path{
+	fill: var(--orange-color);
+}
+.news-images:nth-child(5n + 2) svg path{
+	fill: var(--green-color);
+}
+.news-images:nth-child(5n + 3) svg path{
+	fill: var(--skyblue-color);
+}
+.news-images:nth-child(5n + 4) svg path{
+	fill: var(--purple-color);
+}
+.news-images:nth-child(5n + 5) svg path{
+	fill: var(--lightgreen-color);
+}
+
+.rj-aspire-contents .aspire-title{
+	font: 700 clamp(18px, 3vw, 24px)/1.6 'Poppins', sans-serif;
+}
+
+.rj-aspire-contents .accordion-header button{
+	font: 700 clamp(16px, 3vw, 18px)/1.6 'Poppins', sans-serif;
+}
+.rj-aspire-contents .accordion-header :is(button:focus, button:hover){
+	background-color: rgb(207, 226, 255);
+	color: rgb(5, 44, 101)
+}
+
+.rj-aspire-contents .accordion-body h4{
+	font: 700 14px/1.6 'Poppins', sans-serif;
+}
+.rj-aspire-contents .accordion-body h4 a{
+	margin-inline-start: 10px;
+}
+
+.single-post-content, .rj-single-post-iframe{
+	margin: 15px 0;
+}
+
+.new-vendor-pdfs svg{
+	width: 30px;
+	height: 30px;
+	margin-inline-end: 10px;
+}
+.new-vendor-pdfs a{
+	text-transform: capitalize;
+}
+
+.frontend-post-form{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	gap: 10px
+}
+
+.frontend-post-form input[type="submit"]{
+	width: max-content;
+	background-color: var(--skyblue-color);
+	margin-top: 20px;
+	/* margin: auto; */
+}
+.frontend-post-form label{
+	margin-top: 10px;
+	font: 600 16px/1 'Poppins', sans-serif;
+}
+.frontend-post-form label[for="post_images"]{
+	width: max-content;
+	cursor: pointer;
+}
+.frontend-post-form input[type="file"] {
+	display: none;
+}
+.frontend-post-form .news-images-btn{
+	width: max-content;
+	background-color: var(--green-color);
+	color: var(--white-color);
+	padding: 5px 30px;
+	font: 500 12px/2 'Poppins', sans-serif;
+}
+
+.rj-post-navigation{
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: clamp(10px,  2vw, 40px);
+}
+.rj-post-navigation > *{
+	background-color: var(--green-color);
+	display: block;
+	padding: 2px 5px;
+	color: var(--white-color);
+	min-width: 30px;
+	text-align: center;
+}
+
+
+/*  dte benefits page */
+
+@font-face {
+    font-family: 'Your Font Name';
+    src: url('path/to/your/font-file.woff2') format('woff2'),
+         url('path/to/your/font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.rj-benefits-vif{
+	background-color: #91c647;
+}
+.rj-benefits-vif .container{
+	position: relative;
+	min-height: 450px;
+	height: 30vh; 
+}
+.rj-dte-benefits .enroll-box{
+	max-width: 320px;
+	aspect-ratio: 1/1;
+	background-color: #072e56;
+	border-radius: 50%;
+	color: fff;
+	display: grid;
+	place-items: center;
+	padding: 40px;
+	text-align: center;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	transform: translateY(10%);
+}
+.rj-dte-benefits .enroll-box h3{
+	color: #fff;
+}
+.rj-dte-benefits .enroll-box a, .access-benefits-enrollment  a, .goAlerts a{
+	background-color: #fff;
+	padding: 10px 60px;
+	border-radius: 40px;
+	font: 700 16px/1.4 "Source Sans Pro", arial, sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.rj-dte-benefits .rj-main-heading{
+	font-family: "Fjalla One", arial, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0px;
+}
+.rj-dte-benefits .rj-post-content{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.rj-dte-benefits .rj-read-more{
+	background-color: rgb(14, 68, 123);
+	font: 700 16px/2.5 "Source Sans Pro", arial, sans-serif;
+	text-transform: uppercase;
+	margin: auto;
+	border-radius: 60px;
+}
+.rj-dte-benefits .rj-post-desc{
+	font-size: 18px;
+}
+.rj-need-help{
+	background-image: url('./assets/images/need-help-bg.webp');
+}
+.rj-need-help, .access-benefits-enrollment, .goAlerts{
+	background-position: center;
+	padding: 56px 0;
+	position: relative;
+	isolation: isolate;
+}
+.rj-need-help::after, .access-benefits-enrollment::after{
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: -1;
+}
+.rj-need-help h2, .access-benefits-enrollment h3, .goAlerts .rj-main-heading{
+	font: 500 48px/1.3 "Fjalla One", arial, sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0 5%;
+}
+.accessing-benefits-sec{
+	text-align: center;
+}
+.accessing-benefits-sec .row{
+	align-items: center;
+}
+.accessing-benefits-sec h3{
+	font: 700 18px/1.5 "Source Sans Pro", arial, sans-serif;
+	margin-block: 40px;
+}
+.accessing-benefits-sec p{
+	font: 400 18px/1.5 "Source Sans Pro", arial, sans-serif;
+}.access-line{
+	display: block;
+	margin: 40px auto;
+}
+.benefits-id-cards h3, .dte-care-fund h3, .benefits-contact-us h3{
+	font: 400 24px/1.2 "Fjalla One", arial, sans-serif;
+	color: rgb(27, 27, 27);
+	text-transform: uppercase;
+}
+.id-benefits-cards{
+	text-align: center;
+	color: rgb(94, 94, 94);
+	margin-bottom: 20px;
+}
+.id-benefits-cards *{
+	font-size: 16px;
+	line-height: 1.5;
+}
+.id-benefits-cards :is(ul, ol){
+	list-style: inherit;
+	text-align: start;
+}
+.access-benefits-enrollment{
+	background-image: url('./assets/images/access-benefits-bg.webp');
+}
+.access-benefits-enrollment .container{
+	display: flex;
+	align-items: center;
+}
+.access-benefits-enrollment a, .goAlerts a{
+	flex-grow: 1;
+	flex-shrink: 0;
+	background-color: #1b4170;
+	padding: 20px 56px;
+	color: #fff;
+}
+.other-benefits h3{
+	font: 400 18px/1.5 "Source Sans Pro", arial, sans-serif;
+	color: rgb(27, 27, 27);
+}
+.other-benefits img{
+	aspect-ratio: 16/9;
+	margin-block: 30px;
+}
+.goAlerts{
+	background-image: url('./assets/images/goAlerts-bg.webp');
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.goAlerts .rj-main-heading{
+	margin-bottom: 0;
+	padding: 0;
+}
+.goAlerts a{
+	flex-grow: 0;
+}
+.benefits-contact-us{
+	text-align: center;
+}
